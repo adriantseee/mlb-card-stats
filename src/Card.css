@@ -1,28 +1,128 @@
+@font-face{
+    font-family: Code;
+    src: url('Code.woff2');
+}
+
+#root{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
 html{
     margin: 0;
     padding: 0;
 }
 
+h1{
+    font-family: Code;
+    margin: 0;
+}
+
+h2{
+    font-family: Code;
+}
+
+h3{
+    font-family: Code;
+}
+
+p{
+    font-family: Code;
+}
+
 .card-container{
+    position: relative;
     height: 69.7vh;
     width: 69.7vh;
 }
 
 .card{
+    position: relative;
     width: 50%;
     height: 74.2%;
     margin: 0;
     padding: 0;
+    color: white;
+    background-color: #272626;
+}
+
+.logo-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    position: absolute;
+    top: 2vh;
+    left: 3vh;
+    width: 62%;
+    z-index: 1;
+}
+
+.player-name-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 1vh;
+    left: 1vh;
+    z-index: 4;
+}
+
+.player-name{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    bottom: 0;
+    z-index: 4;
+}
+
+.player-name h1{
+    height: 5.5vh;
 }
 
 .card-image-container{
+    position: absolute;
     width: 100%;
     height: 78.3%;
     overflow: hidden;
+    bottom: 0;
+    z-index: 3;
 }
 
 .card-image{
+    position: absolute;
     width: 100%; 
     height: 78.3%; 
     object-fit: cover;
+    left: 0;
+    bottom: 0;
+}
+
+.position{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    right: 1vh;
+    top: 1.5vh;
+}
+
+.position div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.position img{
+    width: 100%;
+    height: 100%;
 }

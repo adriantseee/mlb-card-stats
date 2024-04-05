@@ -7,7 +7,7 @@ import Card from './Card'
 function App() {
   return (
     <>
-      <Card playerID = "605141"/>
+      <Card playerID = "607192"/>
     </>
   )
 }

@@ -10,9 +10,9 @@ function Card({playerID}){
             console.log(data.people[0].id);
             var newPlayer = await(arrangeData(data));
             setPlayer(newPlayer);
-            var playerImage = await(getImage(playerID));
+            /*var playerImage = await(getImage(playerID));
             console.log(playerImage);
-            setImage(playerImage);
+            setImage(playerImage);*/
         }
         fetchData();
     }, [playerID]);
@@ -84,11 +84,26 @@ function Card({playerID}){
     return(
         <div className="card-container">
             <div className="card">
-                <h1>{player.name}</h1>
-                <h1>{player.surname}</h1>
-                <div className="card-image-container">
-                    <img className="card-image" src={image}/>
+                <div className="player-name-container">
+                    <div className="player-name">
+                        <h1>{player.name}</h1>
+                        <h1>{player.surname}</h1>
+                    </div>
                 </div>
+                <div className="logo-container">
+                    <img className="logo" src="https://www.mlbstatic.com/team-logos/team-cap-on-light/119.svg" alt="" />
+                </div>
+                <div className="position">
+                    <img src="field.png" alt="" />
+                    <div style = {{width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <h2 style={{margin: "0", marginBottom: "1vh"}}>{player.position}</h2>
+                    </div>
+                </div>
+                <div className="card-image-container">
+                        {//<img className="card-image" src={image}/>
+                        }
+                        <img className="card-image" src="glasnow-test.png" alt="" />
+                    </div>
             </div>
         </div>
     )
