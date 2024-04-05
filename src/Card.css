@@ -1,0 +1,28 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.card-container{
+    height: 69.7vh;
+    width: 69.7vh;
+}
+
+.card{
+    width: 50%;
+    height: 74.2%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-image-container{
+    width: 100%;
+    height: 78.3%;
+    overflow: hidden;
+}
+
+.card-image{
+    width: 100%; 
+    height: 78.3%; 
+    object-fit: cover;
+}
