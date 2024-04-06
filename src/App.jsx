@@ -3,12 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './Card'
+import Searchbar from './Searchbar'
 
 function App() {
+  const [playerID, setPlayerID] = useState("");
   return (
-    <>
-      <Card playerID = "607192"/>
-    </>
+    <div>
+        <Searchbar setPlayerID={setPlayerID}/>
+        <Card playerID={playerID} />
+    </div>
   )
 }
 
