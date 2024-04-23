@@ -1,11 +1,6 @@
 @font-face{
-    font-family: Code;
-    src: url('Code.woff2');
-}
-
-@font-face{
     font-family: Hyperwave;
-    src: url('Hyperwave.woff2');
+    src: url('/public/fonts/Hyperwave.woff2');
 }
 
 #root{
