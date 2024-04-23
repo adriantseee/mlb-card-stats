@@ -3,6 +3,11 @@
     src: url('Code.woff2');
 }
 
+@font-face{
+    font-family: Hyperwave;
+    src: url('Hyperwave.woff2');
+}
+
 #root{
     background-color: white;
     width: 100vw;
@@ -15,20 +20,20 @@ html{
 }
 
 h1{
-    font-family: Code;
+    font-family: Hyperwave;
     margin: 0;
 }
 
 h2{
-    font-family: Code;
+    font-family: Hyperwave;
 }
 
 h3{
-    font-family: Code;
+    font-family: Hyperwave;
 }
 
 p{
-    font-family: Code;
+    font-family: Hyperwave;
 }
 
 .card-container{
@@ -39,27 +44,26 @@ p{
 
 .card{
     position: relative;
-    width: 50%;
-    height: 74.2%;
+    width: 46%;
+    height: 66%;
     margin: 0;
     padding: 0;
     color: white;
-    background-color: #272626;
+    overflow: hidden;
 }
 
 .logo-container{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .logo{
-    position: absolute;
-    top: 2vh;
-    left: 3vh;
-    width: 62%;
+    margin-left: 3%;
+    width: 68%;
     z-index: 1;
 }
 
@@ -67,16 +71,13 @@ p{
     position: absolute;
     width: 100%;
     height: 100%;
-    bottom: 1vh;
-    left: 1vh;
+    bottom: 3vh;
     z-index: 4;
 }
 
 .player-name{
+    width: 100%;
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     justify-content: center;
     bottom: 0;
     z-index: 4;
@@ -84,12 +85,21 @@ p{
 
 .player-name h1{
     height: 5.5vh;
+    font-size: 9vh;
+}
+
+.nickname-container{
+    width: 100%;
+}
+
+.nickname{
+    font-size: 5vh;
 }
 
 .card-image-container{
     position: absolute;
     width: 100%;
-    height: 78.3%;
+    height: 85%;
     overflow: hidden;
     bottom: 0;
     z-index: 3;
@@ -98,31 +108,74 @@ p{
 .card-image{
     position: absolute;
     width: 100%; 
-    height: 78.3%; 
+    height: 78%; 
     object-fit: cover;
     left: 0;
     bottom: 0;
 }
 
-.position{
-    position: absolute;
-    width: 10vh;
-    height: 10vh;
-    right: 1vh;
-    top: 1.5vh;
+.position-container{
+    position: relative;
+    margin-top: 1vh;
+    width: 8vh;
+    height: 8vh;
 }
 
-.position div{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
+.position{
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.position h2{
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 5vh;
     text-align: center;
 }
 
-.position img{
+.stats-container{
     width: 100%;
-    height: 100%;
+    margin-top: -4vh;
+}
+
+.stat{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 14%;
+}
+
+.stat h2{
+    font-size: 5vh;
+}
+
+.stat-name{
+    margin-right: 10%;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: rotate(180deg);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: rotate(360deg);
+        animation-timing-function: ease-in;
+    }
+}
+
+.loading-icon {
+    width: 50%;
+    animation: rotateAnimation 2s infinite;
 }

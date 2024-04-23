@@ -10,6 +10,27 @@
   src: url('Code.woff2');
 }
 
+@font-face{
+  font-family: Hyperwave;
+  src: url('Hyperwave.woff2');
+}
+
 html{
   font-family: Code;
+}
+
+.card-container{
+  position: relative;
+  height: 69.7vh;
+  width: 69.7vh;
+}
+
+.card{
+  position: relative;
+  width: 46%;
+  height: 66%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow: hidden;
 }
