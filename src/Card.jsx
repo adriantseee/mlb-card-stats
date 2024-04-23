@@ -168,7 +168,7 @@ function Card({playerID}){
                     {
                     loading ? 
                     <>
-                        <img src="/public/assets/baseball-icon.png" className='loading-icon'/>
+                        <img src="/assets/baseball-icon.png" className='loading-icon'/>
                     </>
                     :
                     <>
